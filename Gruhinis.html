@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GruhinEzz UI</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+	<style>
+		body{
+		background:#e7dcc8;
+		font-family:Georgia, serif;
+		}
+
+		/* NAVBAR */
+
+		.navbar-custom{
+		display:flex;
+		justify-content:space-between;
+		align-items:center;
+		padding:15px 30px;
+		position:fixed;
+		top:0;
+		left:0;
+		width:100%;
+		background:#e7dcc8;
+		z-index:1000;
+		}
+
+		.icon{
+		font-size:28px;
+		color:#6fab68;
+		}
+
+		/* SEARCH BAR */
+
+		.search-box{
+		background:#6fab68;
+		width:50%;
+		search-box
+		border-radius:100%;
+		padding:12px 20px;
+		border:none;
+		color:white;
+		box-shadow:0 6px 10px rgba(0,0,0,0.2);
+		font-size:18px;
+		}
+
+		.search-box::placeholder{
+		color:#e8e8e8;
+		}
+
+		/* SECTION TITLE */
+
+		.section-title{
+		text-align:center;
+		font-size:40px;
+		color:#7a5520;
+		margin:40px 0;
+		height:90px;
+		}
+
+		/* CATEGORY CARDS */
+
+		.category-card{
+		background:#6fab68;
+		border-radius:20px;
+		padding:15px;
+		text-align:center;
+		box-shadow:0 8px 15px rgba(0,0,0,0.2);
+		transition:0.4s;
+		border:2px solid #7a5520;
+		}
+
+		.category-card:hover{
+		transform:translateY(-8px) scale(1.05);
+		}
+
+		.category-card img{
+		width:100%;
+		height:150px;
+		object-fit:cover;
+		border-radius:15px;
+		}
+
+		.category-card p{
+		margin-top:10px;
+		color:#f4a261;
+		font-weight:bold;
+		}
+
+		/* RECENTLY VIEWED */
+
+		.recent-section{
+		padding:30px;
+		}
+
+		.recent-title{
+			font-size:40px;
+			color:#7a5520;
+			margin-bottom:20px;
+		}
+
+		/* horizontal slider */
+
+		.scroll-container{
+		display:flex;
+		gap:25px;
+		overflow-x:auto;
+		scroll-behavior:smooth;
+		padding-bottom:10px;
+		}
+
+		.scroll-container::-webkit-scrollbar{
+		display:none;
+		}
+
+		.product-card{
+		min-width:220px;
+		border:1px solid ;
+		background-color:#6fab68;
+		border-radius:25px;
+		padding:15px;
+		color:white;
+		transition:0.4s;
+		border:2px solid #7a5520;
+		}
+
+		.product-card:hover{
+		transform:scale(1.05);
+		}
+
+		.product-card img{
+		width:100%;
+		height:130px;
+		object-fit:cover;
+		border-radius:15px;
+		margin-bottom:10px;
+		}
+
+		.price{
+		color:#7a5520;
+		font-size:20px;
+		}
+
+		/* OFFERS */
+
+		.offer-section{
+		background:#5e8c3a;
+		margin:40px;
+		padding:40px;
+		border-radius:25px;
+		}
+
+		.offer-title{
+		font-size:40px;
+		color:#f4a261;
+		margin-bottom:20px;
+		}
+
+		.offer-slider{
+		display:flex;
+		gap:30px;
+		overflow-x:auto;
+		}
+
+		.offer-box{
+		min-width:400px;
+		height:200px;
+		background:#d9d9d9;
+		border-radius:40px;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="navbar-custom">
+		<i class="fa-solid fa-cart-shopping icon"></i>
+
+		<input class="search-box" type="text" placeholder="Search..." style="border-radius:40px; border:2px solid #7a5520;">
+		<div>
+			<i class="fa-solid fa-cart-shopping icon" style="margin-right:50px"></i> 
+				 <a href="file:///C:/Users/Kashish/OneDrive/Desktop/DT%20Project/loginform.html"><i class="fa-solid fa-user icon" style="margin-right:20px"></i></a>
+		</div>
+	</div>
+	
+	<br><br><br>
+
+	<h2 class="section-title"><i><b>CATEGORY</b></i></h2>
+	<div class="container" style="height:700px;">
+
+		<div class="row g-5">
+			<div class="col-md-4">
+				<div class="category-card">
+					<img src="C:\Users\Kashish\OneDrive\Desktop\DT Project\images\papad.avif" style="border:1px solid white;">
+					<p style="color:white; font-size:18px"><a href="file:///C:/Users/Kashish/OneDrive/Desktop/DT%20Project/papad.html" style="text-decoration:none; color:white">Papad</a></p>
+				</div>
+			</div>
+
+			<div class="col-md-4">
+				<div class="category-card">
+					<img src="C:\Users\Kashish\OneDrive\Desktop\DT Project\images\aachar.avif" style="border:1px solid white;">
+					<p style="color:white; font-size:18px"><a href="file:///C:/Users/Kashish/OneDrive/Desktop/DT%20Project/Achaar.html"  style="text-decoration:none; color:white"> Achaar </a></p>
+				</div>
+			</div>
+
+			<div class="col-md-4">
+				<div class="category-card">
+					<img src="C:\Users\Kashish\OneDrive\Desktop\DT Project\images\chutney.jpg" style="border:1px solid white;">
+					<p style="color:white; font-size:18px"><a href="file:///C:/Users/Kashish/OneDrive/Desktop/DT%20Project/chutney.html"  style="text-decoration:none; color:white">Chatnies </a></p>
+				</div>
+			</div>
+
+			<div class="col-md-4" style="margin-left:210px">
+				<div class="category-card">
+					<img src="C:\Users\Kashish\OneDrive\Desktop\DT Project\images\upwas.jpg" style="border:1px solid white;">
+					<p style="color:white; font-size:18px"><a href="file:///C:/Users/Kashish/OneDrive/Desktop/DT%20Project/Upwas.html" style="text-decoration:none; color:white">Upwas</a></p>
+				</div>
+			</div>
+
+			<div class="col-md-4">
+				<div class="category-card">
+					<img src="C:\Users\Kashish\OneDrive\Desktop\DT Project\images\masale.jpeg" style="border:1px solid white;">
+					<p style="color:white; font-size:18px"><a href="file:///C:/Users/Kashish/OneDrive/Desktop/DT%20Project/masale.html"  style="text-decoration:none; color:white">Masale</a></p>
+				</div>
+			</div>
+
+		
+		</div>
+
+	</div>
+
+
+	<div class="recent-section">
+		<h2 class="recent-title"><i>MOSTLY SOLED ITEMS</i></h2>
+
+		<div class="scroll-container">
+			<div class="product-card">
+				<img src="C:\Users\Kashish\OneDrive\Desktop\DT Project\images\shabudana.jpg">
+				<center>
+					<h5><b><a href="file:///C:/Users/Kashish/OneDrive/Desktop/DT%20Project/Upwas_one.html" style="text-decoration:none; color:white;">Shabudana Papad</a></b></h5>
+					<p class="price"><b>140 Rs.</b> </p>
+				</center>
+			</div>
+
+			<div class="product-card">
+				<img src="C:\Users\Kashish\OneDrive\Desktop\DT Project\images\mostly_one.webp">
+				<center>
+				<h5><b><a href="file:///C:/Users/Kashish/OneDrive/Desktop/DT%20Project/Achaar_two.html" style="text-decoration:none; color:white;">mango Achaar</a></b></h5>
+				<p class="price"><b>230 Rs.</b></p>
+				</center>
+			</div>
+			
+			<div class="product-card">
+				<img src="C:\Users\Kashish\OneDrive\Desktop\DT Project\images\mostly_3.jpg">
+				<center>
+				<h5><b><a href="file:///C:/Users/Kashish/OneDrive/Desktop/DT%20Project/masala_two.html" style="text-decoration:none; color:white;">Garam Masala</a></b></h5>
+				<p class="price"><b>100 Rs.</b></p>
+				</center>
+			</div>
+			
+			
+			<div class="product-card">
+				<img src="C:\Users\Kashish\OneDrive\Desktop\DT Project\images\tea-masala.png">
+				<center>
+				<h5><b><a href="file:///C:/Users/Kashish/OneDrive/Desktop/DT%20Project/masala_one.html" style="text-decoration:none; color:white;">Tea masala</a></b></h5>
+				<p class="price"><b>70 Rs.</b></p>
+				</center>
+			</div>
+			
+			
+			<div class="product-card">
+				<img src="C:\Users\Kashish\OneDrive\Desktop\DT Project\images\mostly_4.jpeg">
+				<center>
+				<h5><b> <a href="file:///C:/Users/Kashish/OneDrive/Desktop/DT%20Project/papad_four.html" style="text-decoration:none; color:white;"> Urad Papad </a></b></h5>
+				<p class="price"><b>180 Rs.</b></p>
+				</center>
+			</div>
+			
+			
+			<div class="product-card">
+				<img src="C:\Users\Kashish\OneDrive\Desktop\DT Project\images\mostly_5.jpg">
+				<center>
+				<h5><b><a href="file:///C:/Users/Kashish/OneDrive/Desktop/DT%20Project/Achaar_one.html" style="text-decoration:none; color:white;">Lemon Achaar</a></b></h5>
+				<p class="price"><b>155 Rs.</b></p>
+				</center>
+			</div>
+		</div>
+		
+	</div>
+	
+	
+	<div class="container mt-5" style="background-color:#6fab68;padding:40px; border-radius:25px;">
+		<h2 style="	color:#7a5520; font-size:38px; margin-bottom:25px; "><i>Offers</i></h2>
+
+		<div id="offerCarousel" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-inner">
+
+				<!-- Slide 1 -->
+				<div class="carousel-item active">
+					<div class="row">
+						<div class="col-md-4">
+							<img src="C:\Users\Kashish\OneDrive\Desktop\DT Project\images\offer_one.jpeg" style="width:100%; height:220px; object-fit:cover; border-radius:20px; border:2px solid #7a5520;">
+						</div>
+
+						<div class="col-md-4">
+							<img src="C:\Users\Kashish\OneDrive\Desktop\DT Project\images\offrer_two.jpeg" style="width:100%; height:220px; object-fit:cover; border-radius:20px; border:2px solid #7a5520;">
+						</div>
+
+						<div class="col-md-4">
+							<img src="C:\Users\Kashish\OneDrive\Desktop\DT Project\images\offer_3.jpeg" style="width:100%; height:220px; object-fit:cover; border-radius:20px; border:2px solid #7a5520;">
+						</div>
+					</div>
+				</div>
+
+				<!-- Slide 2 -->
+				<div class="carousel-item">
+					<div class="row">
+						<div class="col-md-4">
+							<img src="C:\Users\Kashish\OneDrive\Desktop\DT Project\images\offer_4.jpeg" style="width:100%; height:220px; object-fit:cover; border-radius:20px; border:2px solid #7a5520;">
+						</div>
+
+						<div class="col-md-4">
+							<img src="C:\Users\Kashish\OneDrive\Desktop\DT Project\images\offer_5.jpeg"style="width:100%; height:220px; object-fit:cover; border-radius:20px; border:2px solid #7a5520;">
+						</div>
+
+						<div class="col-md-4">
+							<img src="C:\Users\Kashish\OneDrive\Desktop\DT Project\images\offer_6.jpeg" style="width:100%; height:220px; object-fit:cover; border-radius:20px; border:2px solid #7a5520;">
+						</div>
+					</div>
+				</div>
+
+				<!-- Slide 3 -->
+				<div class="carousel-item">
+					<div class="row">
+						<div class="col-md-4">
+							<img src="C:\Users\Kashish\OneDrive\Desktop\DT Project\images\offer_7.jpeg" style="width:100%; height:220px; object-fit:cover; border-radius:20px; border:2px solid #7a5520;">
+						</div>
+
+						<div class="col-md-4">
+							<img src="C:\Users\Kashish\OneDrive\Desktop\DT Project\images\offer_8.jpeg" style="width:100%; height:220px; object-fit:cover; border-radius:20px; border:2px solid #7a5520;">
+						</div>
+
+						<div class="col-md-4">
+							<img src="C:\Users\Kashish\OneDrive\Desktop\DT Project\images\offer_9.jpeg" style="width:100%; height:220px; object-fit:cover; border-radius:20px; border:2px solid #7a5520;">
+						</div>
+					</div>
+				</div>
+
+				
+			</div>
+
+			<!-- Left Arrow -->
+			<button class="carousel-control-prev" type="button" data-bs-target="#offerCarousel" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon"></span>
+			</button>
+
+			<!-- Right Arrow -->
+			<button class="carousel-control-next" type="button" data-bs-target="#offerCarousel" data-bs-slide="next">
+				<span class="carousel-control-next-icon"></span>
+			</button>
+
+		</div>
+	</div>
+	<br>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
